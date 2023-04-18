@@ -1,0 +1,267 @@
+﻿@model (ProductUpdateDto ProUpdate,ProductDetailsUpdateDto ProDetaUpdate,ProductDto ProView,ProductDetailsDto ProDetaView,List<ProductDto> ProList,List<GenderDto> genderlist, List<CategoryDto> categorylist)
+@using ServiceLayer.DTOs.Product
+@using ServiceLayer.DTOs.ProductDetails
+@using DomainLayer.Enums
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mehsul Edit</h4>
+                <form asp-action="Update" asp-controller="Product" asp-area="AdminPanel" class="form-sample" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Mehsul Adi :</label>
+                                <div class="col-sm-9">
+                                    <input asp-for="ProUpdate.Name" type="text" class="form-control" placeholder="Mehsul adini yazin..." />
+                                    <span asp-validation-for="ProUpdate.Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Kateqoriya :</label>
+                                <div class="col-sm-9">
+                                    <select asp-for="ProUpdate.CategoryID" asp-items="@(new SelectList(Model.categorylist,"Id","Name"))" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Qiymet :</label>
+                                <div class="col-sm-9">
+                                    <input asp-for="ProUpdate.Price" type="number" class="form-control" />
+                                    <span asp-validation-for="ProUpdate.Price" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Etiket :</label>
+                                <div class="col-sm-9">
+                                    <select asp-for="ProUpdate.Ticket" asp-items="Html.GetEnumSelectList<Tickets>()" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Foto :</label>
+                                <div class="col-sm-9">
+                                    <input asp-for="ProUpdate.Photo" style="width:25%;height:40px;">
+                                    <span asp-validation-for="ProUpdate.Photo" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Cinsiyyet :</label>
+                                <div class="col-sm-9">
+                                    <select asp-for="ProUpdate.GenderID" asp-items="@(new SelectList(Model.genderlist,"Id","Name"))" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" asp-for="ProUpdate.Id" />
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mehsul Detallari</h4>
+                <form class="form-sample" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Mehsul Adi :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.ProView.Name
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Kateqoriya :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.ProView.CategoryName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Qiymet :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.ProView.Price
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Etiket :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.ProView.Ticket.ToString()
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Foto :</label>
+                                <div style="width:15%;height:15%;border-radius:100%;" class="col-sm-9">
+                                    <img src="~/AdminPanel/img/product/@Model.ProView.Image" style="width:15%;height:15%;border-radius:100%;" class="mr-2" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Cinsiyyet :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.ProView.GenderName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title">Mehsul Adi : @Model.ProUpdate.Name</h4>
+                <form asp-action="Update" asp-controller="ProductDetails" asp-area="AdminPanel" class="forms-sample" method="post">
+
+                    <div class="form-group row">
+                        <label asp-for="ProDetaUpdate.Size" class="col-sm-3 col-form-label">Beden :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="ProDetaUpdate.Size" asp-items="Html.GetEnumSelectList<Sizes>()" class="form-control">
+                            </select>
+                            <span asp-validation-for="ProDetaUpdate.Size" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaUpdate.Color" class="col-sm-3 col-form-label">Reng :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="ProDetaUpdate.Color" asp-items="Html.GetEnumSelectList<Colors>()" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaUpdate.Count" class="col-sm-3 col-form-label">Say :</label>
+                        <div class="col-sm-9">
+                            <input asp-for="ProDetaUpdate.Count" type="number" class="form-control" id="exampleInputEmail2">
+                            <span asp-validation-for="ProDetaUpdate.Count" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaUpdate.StarCount" class="col-sm-3 col-form-label">Reyting :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="ProDetaUpdate.StarCount" asp-items="Html.GetEnumSelectList<Reyting>()" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaUpdate.Availability" class="col-sm-3 col-form-label">Movcuddur ?</label>
+                        <input asp-for="ProDetaUpdate.Availability" type="checkbox" class="form-control" id="exampleInputEmail2" checked>
+                    </div>
+                    <input type="hidden" asp-for="ProDetaUpdate.Id" />
+                    <input type="hidden" asp-for="ProDetaUpdate.ProductID" />
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    @* Product Detail *@
+    <div class="col-md-7 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title">Mehsul Adi: @Model.ProDetaView.ProductName</h4>
+                <form class="forms-sample">
+                    <div class="form-group row">
+                        <label asp-for="ProDetaView.Size" class="col-sm-3 col-form-label">Beden.</label>
+                        <div class="col-sm-9">
+                            <p class="form-control">
+                                @Model.ProDetaView.Size.ToString()
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaView.Color" class="col-sm-3 col-form-label">Reng.</label>
+                        <div class="col-sm-9">
+                            <p class="form-control">
+                                @Model.ProDetaView.Color.ToString()
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaView.Count" class="col-sm-3 col-form-label">Say.</label>
+                        <div class="col-sm-9">
+                            <p class="form-control">
+                                @Model.ProDetaView.Count eded
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaView.StarCount" class="col-sm-3 col-form-label">Reyting.</label>
+                        <div class="col-sm-9">
+                            <p class="form-control">
+                                @Model.ProDetaView.StarCount
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="ProDetaView.Availability" class="col-sm-3 col-form-label">Movcuddur?.</label>
+                        <div class="col-sm-9">
+                            @if (Model.ProDetaView.Availability)
+                            {
+                <p class="form-control">
+                    Aktiv
+                </p> }
+                            else
+                            {
+                <p class="form-control">
+                    Aktiv Deyil
+                </p>}
+                        </div>
+                    </div>
+                    <a asp-action="ProductDetailsList" asp-controller="ProductDetails" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

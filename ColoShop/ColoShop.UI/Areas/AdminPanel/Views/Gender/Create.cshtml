@@ -1,0 +1,60 @@
+﻿@model (List<GenderDto> genderlist,GenderCreateDto genderdto)
+@{ int count = 1; }
+
+<div class="row">
+    <div class="col-md-5 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title">Genders Create</h4>
+                <form asp-action="Create" asp-controller="Gender" asp-area="AdminPanel" class="forms-sample" method="post">
+                    <div class="form-group row">
+                        <label asp-for="@Model.genderdto.Name" class="col-sm-3 col-form-label">Cins.</label>
+                        <div class="col-sm-9">
+                            <input asp-for="@Model.genderdto.Name" class="form-control" id="exampleInputEmail2" placeholder="Cins. yazin...">
+                            <span asp-validation-for="@Model.genderdto.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <a asp-action="Index" asp-controller="Dashboard" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Gender List</h4>
+                <div class="mt-auto">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Cins.</th>
+                                    <th>Tarix</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var genderDto in Model.genderlist)
+                                {
+                    <tr>
+                        <td>@count</td>
+                        <td>@genderDto.Name</td>
+                        <td>@genderDto.CreateDate.ToString("MMM dd, yyyy")</td>
+                        <td>
+                            <a asp-action="Details" asp-controller="Gender" asp-area="AdminPanel" asp-route-id="@genderDto.Id" ><i class="bi bi-card-list"></i></a>
+                            <a asp-action="Update" asp-controller="Gender" asp-area="AdminPanel" asp-route-id="@genderDto.Id" ><i class="bi bi-pencil-square"></i></a>
+                            <a asp-action="Delete" asp-controller="Gender" asp-area="AdminPanel" asp-route-id="@genderDto.Id" ><i class="bi bi-x-square"></i></a>
+                        </td>
+                    </tr>
+                                    count++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

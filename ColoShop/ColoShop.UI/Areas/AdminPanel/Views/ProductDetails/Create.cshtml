@@ -1,0 +1,118 @@
+﻿@model (ProductDetailsCreateDto dto, List<ProductDto> productlist,List<ProductDetailsDto> productdetailslist)
+@using ServiceLayer.DTOs.ProductDetails
+@using ServiceLayer.DTOs.Product
+@using DomainLayer.Enums
+@{ 
+    int count = 1;
+}
+<div class="row">
+    <div class="col-md-5 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title">ProductDetail Create</h4>
+                <form asp-action="Create" asp-controller="ProductDetails" asp-area="AdminPanel" class="forms-sample" method="post">
+                    <div class="form-group row">
+                        <label asp-for="dto.ProductID" class="col-sm-3 col-form-label">Mehsul :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="dto.ProductID" asp-items="@(new SelectList(Model.productlist,"Id","Name"))" class="form-control">
+                            </select>
+                            <span class="text-danger" asp-validation-for="dto.ProductID"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="dto.Size" class="col-sm-3 col-form-label">Beden :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="dto.Size" asp-items="Html.GetEnumSelectList<Sizes>()" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="dto.Color" class="col-sm-3 col-form-label">Reng :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="dto.Color" asp-items="Html.GetEnumSelectList<Colors>()" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="dto.Count" class="col-sm-3 col-form-label">Say :</label>
+                        <div class="col-sm-9">
+                            <input asp-for="dto.Count" type="number" class="form-control" id="exampleInputEmail2">
+                            <span class="text-danger" asp-validation-for="dto.Count"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="dto.StarCount" class="col-sm-3 col-form-label">Reyting :</label>
+                        <div class="col-sm-9">
+                            <select asp-for="dto.StarCount" asp-items="Html.GetEnumSelectList<Reyting>()" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="dto.Availability" class="col-sm-3 col-form-label">Movcuddur ?</label>
+                        <input asp-for="dto.Availability" type="checkbox" class="form-control" id="exampleInputEmail2" checked>
+                    </div>
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+    
+    <div class="col-md-7 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">ProductDetails List</h4>
+                        <div class="mt-auto">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Mehsul</th>
+                                            <th>Beden</th>
+                                            <th>Reng</th>
+                                            <th>Say</th>
+                                            <th>Reyting</th>
+                                            <th>Movcuddur?</th>
+                                            <th>EDIT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var productDetailsDto in Model.productdetailslist)
+                                        {
+                                        <tr>
+                                            <td>@count</td>
+                                            <td><label class="badge badge-gradient-warning">@productDetailsDto.ProductName</label></td>
+                                            <td>@productDetailsDto.Size.ToString()</td>
+                                            <td>@productDetailsDto.Color.ToString()</td>
+                                            <td>@productDetailsDto.Count ed.</td>
+                                            <td>@productDetailsDto.StarCount.ToString()</td>
+                                            @if (productDetailsDto.Availability)
+                                            {
+                                                <td>
+                                                    Aktiv
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    Aktiv deyil
+                                                </td>
+                                            }
+                                            <td>
+                                                <a asp-action="Details" asp-controller="ProductDetails" asp-area="AdminPanel" asp-route-id="@productDetailsDto.Id"><i class="bi bi-card-list"></i></a>
+                                                <a asp-action="Update" asp-controller="ProductDetails" asp-area="AdminPanel" asp-route-id="@productDetailsDto.Id"><i class="bi bi-pencil-square"></i></a>
+                                                <a asp-action="Delete" asp-controller="ProductDetails" asp-area="AdminPanel" asp-route-id="@productDetailsDto.Id"><i class="bi bi-x-square"></i></a>
+                                            </td>
+                                        </tr>
+                                            count++;
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>

@@ -1,0 +1,69 @@
+﻿@model List<ContactDto>
+@using ServiceLayer.DTOs.Contact
+@{
+    int count = 1;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Contact List</h4>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Full Name
+                                </th>
+                                <th>
+                                    E-mail
+                                </th>
+                                <th>
+                                    Message
+                                </th>
+                                <th>
+                                    Tarix
+                                </th>
+                                <th>
+                                    EDIT
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var contact in Model)
+                            {
+                            <tr>
+                                <td>
+                                    @count
+                                </td>
+                                <td>
+                                    @(contact.Name + " " + contact.Surname)
+                                </td>
+                                <td>
+                                    @contact.Email
+                                </td>
+                                <td style="width: 50%">
+                                    @contact.Message
+                                </td>
+
+                                <td>
+                                    @contact.CreateDate.ToString("dd MMM, yyyy")
+                                </td>
+                                <td>
+                                    <a asp-action="Delete" asp-controller="Contact" asp-area="AdminPanel" asp-route-id="@contact.Id"><i class="bi bi-x-square"></i></a>
+                                </td>
+                            </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

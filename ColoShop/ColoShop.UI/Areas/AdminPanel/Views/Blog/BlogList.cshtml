@@ -1,0 +1,101 @@
+﻿@model Paginate<BlogDto>
+@using ServiceLayer.DTOs.Blog
+@using ServiceLayer.Utilities.Paginations
+@{
+    int count = 1;
+
+    if (Model.CurrentPage > 1)
+    {
+        count = ((Model.CurrentPage - 1) * 20) + 1;
+    }
+ }
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Blog List</h4>
+                <div class="create-btn" style="display:flex; justify-content:flex-end;">
+                    <a asp-action="Create" asp-area="AdminPanel" asp-controller="Blog" class="btn btn-github">Create</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Foto
+                                </th>
+                                <th>
+                                    Basliq
+                                </th>
+                                <th>
+                                    Haqqinda
+                                </th>
+                                <th>
+                                    Yazar
+                                </th>
+                                <th>
+                                    Tarix
+                                </th>
+                                <th>
+                                    EDIT
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var blog in Model.Datas)
+                            {
+                            <tr>
+                                <td>
+                                    @count
+                                </td>
+                                <td class="py-1">
+                                    <img src="~/AdminPanel/img/blog/@blog.Image" class="mr-2" alt="image">
+                                </td>
+                                <td>
+                                    @blog.Title
+                                </td>
+                                <td style="width: 50%">
+                                    @blog.Description
+                                </td>
+                                <td>
+                                    @blog.ByName
+                                </td>
+                                <td>
+                                    @blog.CreateDate.ToString("dd MMM, yyyy")
+                                </td>
+                                <td>
+                                    <a asp-action="Update" asp-controller="Blog" asp-area="AdminPanel" asp-route-id="@blog.Id"><i class="bi bi-pencil-square"></i></a>
+                                    <a asp-action="Delete" asp-controller="Blog" asp-area="AdminPanel" asp-route-id="@blog.Id"><i class="bi bi-x-square"></i></a>
+                                </td>
+                            </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-3 justify-content-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination ">
+                                <li class="page-item @(Model.HasPrevious ? "": "disabled")">
+                                    <a class="page-link" style="color:black;background: #fa0053ad;" asp-action="BlogList" asp-area="AdminPanel" asp-route-page="@(Model.CurrentPage-1)">Evvelki</a>
+                                </li>
+                                @for (int i = 1; i <= Model.TotalPage; i++)
+                                {
+                                    <li class="page-item @(i == Model.CurrentPage ? "disabled" : "")">
+                                        <a class="page-link" asp-action="BlogList" asp-area="AdminPanel" asp-route-page="@i">@i</a>
+                                    </li>
+                                }
+                                <li class="page-item @(Model.HasNext ? "": "disabled")">
+                                    <a class="page-link" style="color:black;background: #fa0053ad;" asp-action="BlogList" asp-area="AdminPanel" asp-route-page="@(Model.CurrentPage+1)">Sonraki</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+        </div>
+    </div>
+</div>

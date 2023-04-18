@@ -1,0 +1,152 @@
+﻿@model (List<GenderDto> genderlist, List<CategoryDto> categorylist, ProductCreateDto productDto, List<ProductDto> productlist)
+@using ServiceLayer.DTOs.Product
+@using DomainLayer.Enums
+@{ int count = 1; }
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Product's Create</h4>
+                <form asp-action="Create" asp-controller="Product" asp-area="AdminPanel" class="form-sample" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Mehsul Adi :</label>
+                                <div class="col-sm-9">
+                                    <input asp-for="productDto.Name" type="text" class="form-control" placeholder="Mehsul adini yazin..." />
+                                    <span asp-validation-for="productDto.Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Kateqoriya :</label>
+                                <div class="col-sm-9">
+                                    <select asp-for="productDto.CategoryID" asp-items="@(new SelectList(Model.categorylist,"Id","Name"))" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Qiymet :</label>
+                                <div class="col-sm-9">
+                                    <input asp-for="productDto.Price" type="number" class="form-control" />
+                                    <span asp-validation-for="productDto.Price" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Etiket :</label>
+                                <div class="col-sm-9">
+                                    <select asp-for="productDto.Ticket" asp-items="Html.GetEnumSelectList<Tickets>()" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Foto :</label>
+                                <div class="col-sm-9">
+                                    <input asp-for="productDto.Photo" style="width:25%;height:40px;">
+                                    <span asp-validation-for="productDto.Photo" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Cinsiyyet :</label>
+                                <div class="col-sm-9">
+                                    <select asp-for="productDto.GenderID" asp-items="@(new SelectList(Model.genderlist,"Id","Name"))" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Products</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    No.
+                                </th>
+                                <th>
+                                    Mehsul
+                                </th>
+                                <th>
+                                    Foto
+                                </th>
+                                <th>
+                                    Cins.
+                                </th>
+                                <th>
+                                    Kateq.
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    Etiket
+                                </th>
+                                <th>
+                                    EDIT
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var productDto in Model.productlist)
+                            {
+                <tr>
+                    <td>
+                        @count
+                    </td>
+                    <td>
+                        @productDto.Name
+                    </td>
+                    <td class="py-1">
+                        <img src="~/AdminPanel/img/product/@productDto.Image" class="mr-2" alt="image">
+                    </td>
+                    <td>
+                        @productDto.GenderName
+                    </td>
+                    <td>
+                        @productDto.CategoryName
+                    </td>
+                    <td>
+                        @productDto.Price $
+                    </td>
+                    <td>
+                        <label class="badge badge-gradient-secondary">@productDto.Ticket.ToString()</label>
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-controller="Product" asp-area="AdminPanel" asp-route-id="@productDto.Id"><i class="bi bi-card-list"></i></a>
+                        <a asp-action="Update" asp-controller="Product" asp-area="AdminPanel" asp-route-id="@productDto.Id"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-action="Delete" asp-controller="Product" asp-area="AdminPanel" asp-route-id="@productDto.Id"><i class="bi bi-x-square"></i></a>
+                    </td>
+                </tr>
+}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+﻿@model ProductDto
+@using ServiceLayer.DTOs.Product
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mehsul</h4>
+
+                <form class="form-sample">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Mehsul Adi :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Name
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Cinsiyyet :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.GenderName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Qiymet :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Price
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Kateqoriya :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.CategoryName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Foto :</label>
+                                <div style="width:35%;height:35%;border-radius:100%;" class="col-sm-9">
+                                    <img src="~/AdminPanel/img/product/@Model.Image" style="width:35%;height:35%;border-radius:100%;" class="mr-2" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Etiket :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Ticket.ToString()
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Mehsul Detallari
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Reng :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Color.ToString()
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Beden :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Size.ToString()
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Etiket :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Ticket.ToString()
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Say :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.Count
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Movcuddur? :</label>
+                                <div class="col-sm-9">
+                                    @if (Model.Availability)
+                                    {
+                                        <p class="form-control">
+                                            Aktiv
+                                        </p>
+                                    }
+                                    else 
+                                    {
+                                        <p class="form-control">
+                                            Aktiv Deyil
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Reyting :</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control">
+                                        @Model.StarCount
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

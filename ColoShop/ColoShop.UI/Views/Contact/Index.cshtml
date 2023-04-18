@@ -1,0 +1,97 @@
+﻿@model ContactDto 
+
+
+<link rel="stylesheet" type="text/css" href="~/MemberPanel/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="~/MemberPanel/styles/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="~/MemberPanel/styles/contact_responsive.css">
+
+
+
+<div class="container contact_container">
+    <div class="row">
+        <div class="col">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a asp-action="Index" asp-controller="Home" asp-area="">Home</a></li>
+                    <li class="active"><a asp-action="Index" asp-controller="Contact" asp-area=""><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Contact Us -->
+
+    <div class="row">
+
+        <div class="col-lg-6 contact_col">
+            <div class="contact_contents">
+                <h1>Elaqe Saxlayin.</h1>
+                <p>Hər bir kəs saytda gorduyu sehv veya olmayanlari asagidaki Gmaile gonderse sevinerem.</p>
+                <div>
+                    <p>(055) 856-23-93</p>
+                    <p>suleymanovtaleh887@gmail.com</p>
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    <p>Is vaxti: 8.00-18.00 Hefte ici</p>
+                    <p>Senbe-Bazar: Bagli.!</p>
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+
+            <div class="follow_us_contents">
+                <h1>Follow Us</h1>
+                <ul class="social d-flex flex-row">
+                    <li><a asp-action="Index" asp-controller="Contact" asp-area="" style="background-color: #3a61c9"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/taleh-suleymanov-5b1825233/" style="background-color: #41a1f6"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a asp-action="Index" asp-controller="Contact" asp-area="" style="background-color: #fb4343"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/tal3hh/" style="background-color: #8f6247"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 get_in_touch_col">
+            <div class="get_in_touch_contents">
+                <h1>Bizimlə əlaqə saxlayın!</h1>
+                <p>
+                    Pulsuz və məxfi məlumat almaq üçün aşağıdakı formu doldurun.
+                </p>
+                <form asp-action="Index" asp-controller="Contact" asp-area="" method="post">
+                    <div>
+                        <input class="form_input input_name input_ph" type="text" asp-for="@Model.Name" placeholder="Ad" required="required" data-error="Adinizi yazin...!">
+                        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+
+                        <input class="form_input  input_ph" type="text" asp-for="@Model.Surname" placeholder="Soyad" required="required" data-error="Soyadinizi yazin...!">
+                        <span asp-validation-for="@Model.Surname" class="text-danger"></span>
+
+                        <input class="form_input input_email input_ph" type="email" asp-for="@Model.Email" placeholder="Email" required="required" data-error="Email yazin...!">
+                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+
+                        <textarea class="input_ph input_message" asp-for="@Model.Message" placeholder="Mesaj" rows="3" required data-error="Xahis olunur, Mesajinizi daxil edin.!"></textarea>
+                        <span asp-validation-for="@Model.Message" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Gonder Mesaji</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script src="~/MemberPanel/plugins/easing/easing.js"></script>
+<script src="~/MemberPanel/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="~/MemberPanel/js/contact_custom.js"></script>

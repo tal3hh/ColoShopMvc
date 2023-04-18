@@ -1,0 +1,81 @@
+﻿
+
+
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Product's Details</h4>
+                <form class="form-sample" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Mehsul Adi :</label>
+                                <div class="col-sm-9">
+                                    <p>
+                                        @Model.Name
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Kateqoriya :</label>
+                                <div class="col-sm-9">
+                                    <p>
+                                        @Model.CategoryName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Qiymet :</label>
+                                <div class="col-sm-9">
+                                    <p>
+                                        @Model.Price
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Etiket :</label>
+                                <div class="col-sm-9">
+                                    <p>
+                                        @Model.Ticket.ToString()
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Foto :</label>
+                                <div style="width:35%;height:35%;border-radius:100%;" class="col-sm-9">
+                                    <img src="~/AdminPanel/img/product/@Model.Image" style="width:35%;height:35%;border-radius:100%;" class="mr-2" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Cinsiyyet :</label>
+                                <div class="col-sm-9">
+                                    <p>
+                                        @Model.GenderName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a asp-action="ProductList" asp-controller="Product" asp-area="AdminPanel" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
