@@ -42,7 +42,9 @@ using ServiceLayer.Utilities.Paginations;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"de7decc5a5bcd69a1c3f60809eee19619c2c9cd4", @"/Areas/AdminPanel/Views/Blog/BlogList.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4d9d01354ef48012a87c313693471c67cf904312", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Areas_AdminPanel_Views_Blog_BlogList : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Paginate<BlogDto>>
+    #nullable disable
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "AdminPanel", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -102,7 +104,7 @@ using ServiceLayer.Utilities.Paginations;
                 <h4 class=""card-title"">Blog List</h4>
                 <div class=""create-btn"" style=""display:flex; justify-content:flex-end;"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd48140", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd48186", async() => {
                 WriteLiteral("Create");
             }
             );
@@ -168,7 +170,7 @@ using ServiceLayer.Utilities.Paginations;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                                </td>\r\n                                <td class=\"py-1\">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd411767", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd411813", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -225,7 +227,7 @@ AddHtmlAttributeValue("", 2127, blog.Image, 2127, 11, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                                </td>\r\n                                <td>\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd415179", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd415225", async() => {
                 WriteLiteral("<i class=\"bi bi-pencil-square\"></i>");
             }
             );
@@ -260,7 +262,7 @@ AddHtmlAttributeValue("", 2127, blog.Image, 2127, 11, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd417892", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd417938", async() => {
                 WriteLiteral("<i class=\"bi bi-x-square\"></i>");
             }
             );
@@ -322,7 +324,7 @@ WriteAttributeValue(" ", 3623, Model.HasPrevious ? "": "disabled", 3624, 37, fal
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd421788", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd421834", async() => {
                 WriteLiteral("Evvelki");
             }
             );
@@ -377,7 +379,7 @@ WriteAttributeValue(" ", 4069, i == Model.CurrentPage ? "disabled" : "", 4070, 4
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd425405", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd425451", async() => {
 #nullable restore
 #line 90 "C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\Areas\AdminPanel\Views\Blog\BlogList.cshtml"
                                                                                                                         Write(i);
@@ -436,7 +438,7 @@ WriteAttributeValue(" ", 4380, Model.HasNext ? "": "disabled", 4381, 33, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd429064", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de7decc5a5bcd69a1c3f60809eee19619c2c9cd429110", async() => {
                 WriteLiteral("Sonraki");
             }
             );
@@ -473,16 +475,26 @@ WriteAttributeValue(" ", 4380, Model.HasNext ? "": "disabled", 4381, 33, false);
             WriteLiteral("\r\n                                </li>\r\n                            </ul>\r\n                        </nav>\r\n                    </div>\r\n        </div>\r\n    </div>\r\n</div>");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Paginate<BlogDto>> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Paginate<BlogDto>> Html { get; private set; } = default!;
+        #nullable disable
     }
 }
 #pragma warning restore 1591

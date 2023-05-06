@@ -5,7 +5,6 @@ C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\Col
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\ColoShop.UI.runtimeconfig.json
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\ColoShop.UI.runtimeconfig.dev.json
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\ColoShop.UI.dll
-C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\ref\ColoShop.UI.dll
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\ColoShop.UI.pdb
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\bin\Debug\net5.0\FluentValidation.dll
@@ -74,7 +73,6 @@ C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\Col
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\ColoShop.UI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\ColoShop.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\ColoShop.UI.StaticWebAssets.Manifest.cache
-C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\ColoShop.UI.StaticWebAssets.xml
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\scopedcss\bundle\ColoShop.UI.styles.css
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\ColoShop.UI.RazorTargetAssemblyInfo.cache
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\ColoShop.UI.csproj.CopyComplete
@@ -129,3 +127,9 @@ C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\Raz
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\ColoShop.UI.RazorTargetAssemblyInfo.cs
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\ColoShop.UI.Views.pdb
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\ColoShop.UI.StaticWebAssets.Pack.cache
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\msbuild.ColoShop.UI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\msbuild.build.ColoShop.UI.props
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.ColoShop.UI.props
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.ColoShop.UI.props
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\obj\Debug\net5.0\refint\ColoShop.UI.dll

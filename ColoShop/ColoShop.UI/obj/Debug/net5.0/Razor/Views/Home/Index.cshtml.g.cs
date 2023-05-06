@@ -70,7 +70,9 @@ using ServiceLayer.DTOs.BlogComment;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09f4eeac4c74d622a34a2678cc5ae5de64eb57a7", @"/Views/Home/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"099056b3cc4a5d4b0bf801ece63044eaae7c098a", @"/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<(List<ProductDto> productlist, List<GenderDto> genderlist, List<BlogDto> bloglist)>
+    #nullable disable
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Shop", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -124,7 +126,7 @@ using ServiceLayer.DTOs.BlogComment;
                     <h6>Spring / Summer Collection 2017</h6>
                     <h1>Get up to 30% Off New Arrivals</h1>
                     <div class=""red_button shop_now_button"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a78655", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a78701", async() => {
                 WriteLiteral("shop now");
             }
             );
@@ -167,7 +169,7 @@ WriteAttributeValue("", 1071, "banner_" + count.ToString() + ".jpg", 1071, 40, f
             WriteAttributeValue("", 1111, ")", 1111, 1, true);
             EndWriteAttribute();
             WriteLiteral(">\r\n                        <div class=\"banner_category\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a711531", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a711577", async() => {
 #nullable restore
 #line 31 "C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\Views\Home\Index.cshtml"
                                                                                                                   Write(genderDto.Name.ToLower());
@@ -301,7 +303,7 @@ WriteAttributeValue(" ", 2955, product.GenderName.ToLower(), 2956, 29, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n            <div class=\"product discount product_filter\">\r\n                <div class=\"product_image\">\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a718231", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a718277", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -334,7 +336,7 @@ AddHtmlAttributeValue("", 3182, product.Image, 3182, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span></div>\r\n                <div class=\"product_info\">\r\n                    <h6 class=\"product_name\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a720588", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a720634", async() => {
 #nullable restore
 #line 81 "C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\Views\Home\Index.cshtml"
                                                                                                                                      Write(product.Name);
@@ -383,7 +385,7 @@ AddHtmlAttributeValue("", 3182, product.Image, 3182, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral(" $</div>\r\n                </div>\r\n            </div>\r\n            <div class=\"red_button add_to_cart_button\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a723964", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a724010", async() => {
                 WriteLiteral("add to cart");
             }
             );
@@ -421,7 +423,7 @@ AddHtmlAttributeValue("", 3182, product.Image, 3182, 14, false);
             <div class=""col-lg-6"">
                 <div class=""deal_ofthe_week_img"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a725617", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a725663", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -463,7 +465,7 @@ AddHtmlAttributeValue("", 3182, product.Image, 3182, 14, false);
                         </li>
                     </ul>
                     <div class=""red_button deal_ofthe_week_button"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a728373", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a728419", async() => {
                 WriteLiteral("shop now");
             }
             );
@@ -517,7 +519,7 @@ AddHtmlAttributeValue("", 3182, product.Image, 3182, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("            <div class=\"owl-item product_slider_item\">\r\n                <div class=\"product-item women\">\r\n                    <div class=\"product\">\r\n                        <div class=\"product_image\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a731141", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a731187", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -550,7 +552,7 @@ AddHtmlAttributeValue("", 6971, product.Image, 6971, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span></div>\r\n                        <div class=\"product_info\">\r\n                            <h6 class=\"product_name\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a733536", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a733582", async() => {
 #nullable restore
 #line 164 "C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\Views\Home\Index.cshtml"
                                                                                                                                              Write(product.Name);
@@ -721,7 +723,7 @@ WriteAttributeValue("", 10445, blog.Image, 10445, 11, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a741984", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09f4eeac4c74d622a34a2678cc5ae5de64eb57a742030", async() => {
                 WriteLiteral("Read more");
             }
             );
@@ -752,16 +754,26 @@ WriteAttributeValue("", 10445, blog.Image, 10445, 11, false);
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n</div>\r\n");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<(List<ProductDto> productlist, List<GenderDto> genderlist, List<BlogDto> bloglist)> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<(List<ProductDto> productlist, List<GenderDto> genderlist, List<BlogDto> bloglist)> Html { get; private set; } = default!;
+        #nullable disable
     }
 }
 #pragma warning restore 1591

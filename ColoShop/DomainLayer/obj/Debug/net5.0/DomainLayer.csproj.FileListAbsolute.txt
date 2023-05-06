@@ -1,6 +1,5 @@
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\bin\Debug\net5.0\DomainLayer.deps.json
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\bin\Debug\net5.0\DomainLayer.dll
-C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\bin\Debug\net5.0\ref\DomainLayer.dll
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\bin\Debug\net5.0\DomainLayer.pdb
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\DomainLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -10,3 +9,4 @@ C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\Dom
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
 C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb
+C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\DomainLayer\obj\Debug\net5.0\refint\DomainLayer.dll

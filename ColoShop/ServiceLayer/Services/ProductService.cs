@@ -54,29 +54,13 @@ namespace ServiceLayer.Services
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
 
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+           
+
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
         }
+
         public async Task<Paginate<ProductDto>> GetAllDashboardFilterAsync(string sortOrder,int page, int take)
         {
             
@@ -110,25 +94,7 @@ namespace ServiceLayer.Services
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
 
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+            
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
@@ -168,25 +134,7 @@ namespace ServiceLayer.Services
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
 
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+            
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
@@ -240,25 +188,7 @@ namespace ServiceLayer.Services
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
 
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+          
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
@@ -308,25 +238,7 @@ namespace ServiceLayer.Services
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
 
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+         
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
@@ -366,26 +278,7 @@ namespace ServiceLayer.Services
 
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
-
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+           
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
@@ -426,25 +319,7 @@ namespace ServiceLayer.Services
             //Auto Mapper
             var dtos = _mapper.Map<List<ProductDto>>(entities2);
 
-            foreach (var entity in entities2)
-            {
-                foreach (var dto in dtos)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Availability = entity.ProductDetails.Availability;
-                            dto.Count = entity.ProductDetails.Count;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.Size = entity.ProductDetails.Size;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+          
             var Dtos = new Paginate<ProductDto>(dtos, page, Totalpage);
 
             return Dtos;
@@ -464,24 +339,7 @@ namespace ServiceLayer.Services
 
             var productDto = _mapper.Map<List<ProductDto>>(entities);
 
-            foreach (var entity in entities)
-            {
-                foreach (var dto in productDto)
-                {
-                    if (entity.Id == dto.Id)
-                    {
-                        if (entity.ProductDetails != null)
-                        {
-                            dto.Size = entity.ProductDetails.Size;
-                            dto.Color = entity.ProductDetails.Color;
-                            dto.StarCount = entity.ProductDetails.StarCount;
-                            dto.Count = entity.ProductDetails.Count;
-                        }
-                        dto.CategoryName = entity.Category.Name;
-                        dto.GenderName = entity.Gender.Name;
-                    }
-                }
-            }
+          
             return productDto;
         }
 
@@ -509,19 +367,6 @@ namespace ServiceLayer.Services
             var entity = await _context.Set<Product>().Include(x => x.Category).Include(x => x.Gender).Include(x => x.ProductDetails).FirstOrDefaultAsync(x => x.Id == id);
 
             var dto = _mapper.Map<ProductDto>(entity);
-
-            dto.CategoryName = entity.Category.Name;
-            dto.GenderName = entity.Gender.Name;
-
-            if (entity.ProductDetails != null)
-            {
-                dto.ProductID = entity.ProductDetails.Id;
-                dto.Color = entity.ProductDetails.Color;
-                dto.Size = entity.ProductDetails.Size;
-                dto.Availability = entity.ProductDetails.Availability;
-                dto.Count = entity.ProductDetails.Count;
-                dto.StarCount = entity.ProductDetails.StarCount;
-            }
 
             return dto;
         }

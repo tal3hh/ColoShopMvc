@@ -42,7 +42,9 @@ using ServiceLayer.Utilities.Paginations;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3ff46ea08969abe56bf6a2c1284145e0e5796ea0", @"/Areas/AdminPanel/Views/Product/ProductList.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4d9d01354ef48012a87c313693471c67cf904312", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Areas_AdminPanel_Views_Product_ProductList : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Paginate<ProductDto>>
+    #nullable disable
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("d-flex align-items-stretch h-100"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "ProductSearch", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -107,7 +109,7 @@ using ServiceLayer.Utilities.Paginations;
                 <h4>Mehsullar</h4>
                   <div class=""search-field ml-4 d-none d-md-block text-white"" style=""background: #495057d6;width:20%;height:40px;"">
                      ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea09831", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea09877", async() => {
                 WriteLiteral(@"
                          <div class=""input-group"">
                              <input type=""search"" name=""productSearch"" class=""form-control bg-transparent border-0"" placeholder=""Mehsul'u axtarin..."">
@@ -139,7 +141,7 @@ using ServiceLayer.Utilities.Paginations;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                 </div>\r\n                   <div class=\"create-btn\" style=\"display:flex; justify-content:flex-end;\">\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea012541", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea012587", async() => {
                 WriteLiteral("Create");
             }
             );
@@ -180,7 +182,7 @@ using ServiceLayer.Utilities.Paginations;
                                 </th>
                                 <th>
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea014972", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea015018", async() => {
                 WriteLiteral("\r\n                                        Qiymet.<i class=\"bi bi-funnel-fill\"></i>\r\n                                    ");
             }
             );
@@ -223,7 +225,7 @@ using ServiceLayer.Utilities.Paginations;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                </th>\r\n                                <th>\r\n                                    Beden\r\n                                </th>\r\n                                <th>\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea018388", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea018434", async() => {
                 WriteLiteral("\r\n                                        Say.<i class=\"bi bi-funnel-fill\"></i>\r\n                                    ");
             }
             );
@@ -300,7 +302,7 @@ using ServiceLayer.Utilities.Paginations;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                    </td>\r\n                    <td class=\"py-1\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3ff46ea08969abe56bf6a2c1284145e0e5796ea022970", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3ff46ea08969abe56bf6a2c1284145e0e5796ea023016", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -373,7 +375,7 @@ AddHtmlAttributeValue("", 4008, productDto.Image, 4008, 17, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                    </td>\r\n\r\n                    <td>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea026908", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea026954", async() => {
                 WriteLiteral("<i class=\"bi bi-card-list\"></i>");
             }
             );
@@ -408,7 +410,7 @@ AddHtmlAttributeValue("", 4008, productDto.Image, 4008, 17, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea029612", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea029658", async() => {
                 WriteLiteral("<i class=\"bi bi-pencil-square\"></i>");
             }
             );
@@ -443,7 +445,7 @@ AddHtmlAttributeValue("", 4008, productDto.Image, 4008, 17, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea032319", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea032365", async() => {
                 WriteLiteral("<i class=\"bi bi-x-square\"></i>");
             }
             );
@@ -506,7 +508,7 @@ WriteAttributeValue(" ", 5643, Model.HasPrevious ? "": "disabled", 5644, 37, fal
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea036198", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea036244", async() => {
                 WriteLiteral("Evvelki");
             }
             );
@@ -572,7 +574,7 @@ WriteAttributeValue(" ", 6271, i == Model.CurrentPage ? "disabled" : "", 6272, 4
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea040561", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea040607", async() => {
 #nullable restore
 #line 132 "C:\Users\HP\Desktop\ColoShop\OnionArch\ColoShop\ColoShop.UI\Areas\AdminPanel\Views\Product\ProductList.cshtml"
                                                           Write(i);
@@ -642,7 +644,7 @@ WriteAttributeValue(" ", 6773, Model.HasNext ? "": "disabled", 6774, 33, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea044957", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ff46ea08969abe56bf6a2c1284145e0e5796ea045003", async() => {
                 WriteLiteral("Sonraki");
             }
             );
@@ -690,16 +692,26 @@ WriteAttributeValue(" ", 6773, Model.HasNext ? "": "disabled", 6774, 33, false);
             WriteLiteral("\r\n                                </li>\r\n                            </ul>\r\n                        </nav>\r\n                    </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Paginate<ProductDto>> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Paginate<ProductDto>> Html { get; private set; } = default!;
+        #nullable disable
     }
 }
 #pragma warning restore 1591

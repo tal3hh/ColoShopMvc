@@ -37,7 +37,18 @@ namespace ServiceLayer.Mapping
             CreateMap<Gender, GenderCreateDto>().ReverseMap();
             CreateMap<Gender, GenderUpdateDto>().ReverseMap();
 
-            CreateMap<Product, ProductDto>().ReverseMap();
+            CreateMap<Product, ProductDto>()
+                .ForMember(x => x.Availability, y => y.MapFrom(z => z.ProductDetails.Availability))
+                .ForMember(x => x.Color, y => y.MapFrom(z => z.ProductDetails.Color))
+                .ForMember(x => x.Size, y => y.MapFrom(z => z.ProductDetails.Size))
+                .ForMember(x => x.Count, y => y.MapFrom(z => z.ProductDetails.Count))
+                .ForMember(x => x.StarCount, y => y.MapFrom(z => z.ProductDetails.StarCount))
+                .ForMember(x => x.CategoryName, y => y.MapFrom(z => z.Category.Name))
+                .ForMember(x => x.GenderName, y => y.MapFrom(z => z.Gender.Name));
+
+            CreateMap<ProductDto,Product>();
+
+
             CreateMap<Product, ProductUpdateDto>().ReverseMap();
             CreateMap<Product, ProductCreateDto>().ReverseMap();
 
